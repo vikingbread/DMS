@@ -1,4 +1,7 @@
 package com.tarena.dms.bo;
+
+import java.io.File;
+
 /** 
  * @author  Viking
  * @version 创建时间：2013-10-19 下午10:57:08 
@@ -7,61 +10,77 @@ package com.tarena.dms.bo;
 public class ClientConfig {
 	
 	
+	/**
+	 * 日志文件
+	 */
+	private File logFile;
+	/**
+	 * 临时日志文件
+	 */
+	private File tempLogFile;
+	/**
+	 * 
+	 */
+	private File textLogFile;
+	/**
+	 * 成对的登入、登出日志
+	 */
+	private File logRecFile;
 	
-	private String logFile;
-	private String tempLogFile;
-	private String textLogFile;
-	private String logRecFile;
-	private String loginLogFile;
-	private String lastPositionFile;
-	private String stepIndexFile;
+	private File loginLogFile;
+	private File lastPositionFile;
+	private File stepIndexFile;
 	private int batch;
 	private String dmsServerHost;
 	private int port;
 	private String serverHost;
 	
 	
-	public String getLogFile() {
+
+	public File getLogFile() {
 		return logFile;
 	}
-	public void setLogFile(String logFile) {
+	public void setLogFile(File logFile) {
 		this.logFile = logFile;
 	}
-	public String getTempLogFile() {
+	public File getTempLogFile() {
 		return tempLogFile;
 	}
-	public void setTempLogFile(String tempLogFile) {
+	public void setTempLogFile(File tempLogFile) {
 		this.tempLogFile = tempLogFile;
 	}
-	public String getTextLogFile() {
+	public File getTextLogFile() {
 		return textLogFile;
 	}
-	public void setTextLogFile(String textLogFile) {
+	public void setTextLogFile(File textLogFile) {
 		this.textLogFile = textLogFile;
 	}
-	public String getLogRecFile() {
+	public File getLogRecFile() {
 		return logRecFile;
 	}
-	public void setLogRecFile(String logRecFile) {
+	public void setLogRecFile(File logRecFile) {
 		this.logRecFile = logRecFile;
 	}
-	public String getLoginLogFile() {
+	public File getLoginLogFile() {
 		return loginLogFile;
 	}
-	public void setLoginLogFile(String loginLogFile) {
+	public void setLoginLogFile(File loginLogFile) {
 		this.loginLogFile = loginLogFile;
 	}
-	public String getLastPositionFile() {
+	public File getLastPositionFile() {
 		return lastPositionFile;
 	}
-	public void setLastPositionFile(String lastPositionFile) {
+	public void setLastPositionFile(File lastPositionFile) {
 		this.lastPositionFile = lastPositionFile;
 	}
-	public String getStepIndexFile() {
+	public File getStepIndexFile() {
 		return stepIndexFile;
 	}
-	public void setStepIndexFile(String stepIndexFile) {
+	public void setStepIndexFile(File stepIndexFile) {
 		this.stepIndexFile = stepIndexFile;
+	}
+	public void setPort(int port) {
+		this.port = port;
 	}
 	public int getBatch() {
 		return batch;

@@ -14,9 +14,11 @@ import com.tarena.dms.util.Utils;
 public class Demo {
 
 	public static void main(String[] args) throws IOException {
-		File file = new File("wtmpx");
+		File file = new File("temp.log".trim());//temp.log wtmpx
+	//	File file = new File("wtmpx");//temp.log wtmpx
+		System.out.println(file.getAbsolutePath());
 		RandomAccessFile in = new RandomAccessFile(file, "r");
-		int count = 10;
+		int count = 2;
 		int logLenth = 372;
 		byte[] log = new byte[logLenth * count];
 //		in.seek(372 * 6);

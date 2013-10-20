@@ -27,7 +27,13 @@ public static short toShort(byte[] arr, int offset) {
 
 	}
 
-
+	/**
+	 * Nice try,but no
+	 * @param arr
+	 * @param offset
+	 * @param len
+	 * @return
+	 */
 	public static  String toString(byte[] arr, int offset, int len) {
 		String str = null;
 		try {

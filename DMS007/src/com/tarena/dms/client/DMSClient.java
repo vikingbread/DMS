@@ -16,6 +16,7 @@ public class DMSClient {
 	
 	public DMSClient() {
 		System.out.println(config);
+		System.out.println("hah");
 	}
 	static {
 		Properties prop = new Properties();

@@ -140,5 +140,16 @@ public class LogData {
 				+ separator + time + separator + host;
 		return str;
 	}
-
+	
+	public boolean isMach(LogData obj) {
+		
+		boolean isMach = true;		
+		isMach = isMach && this.user.equals(obj.getUser());
+		isMach = isMach && (this.pid == obj.getPid());
+		isMach = isMach && (this.type != obj.getType());
+		isMach = isMach && this.host.equals(obj.getHost());
+		
+		return isMach;
+	}
+	
 }

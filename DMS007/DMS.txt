@@ -119,9 +119,11 @@
   
   1) 检查 log-rec.txt 是否存在，如果存在说明数据还没有发送，不进行匹配处理。
   2）检查log.txt 是否存在，如果没有，返回false
+  
   3）读取log.txt 到集合 logs 
   4) 读取login.txt 到集合 logins 
   5) 合并 logs + logins
+  
   6) 迭代集合，找到每个登陆日志，
   7）使用登陆日志迭代匹配登出日志，如果匹配上保存到 logRecList 
     如果未匹配，就是单条登陆记录，保存到 logins

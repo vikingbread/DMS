@@ -10,31 +10,32 @@ import java.io.UnsupportedEncodingException;
 public class Utils {
 
 	public static int toInt(byte[] arr, int offset) {
-		
+
 		int d1 = arr[offset] & 0xff;
-		int d2 = arr[offset+1] & 0xff;
-		int d3 = arr[offset+2] & 0xff;
-		int d4 = arr[offset+3] & 0xff;
+		int d2 = arr[offset + 1] & 0xff;
+		int d3 = arr[offset + 2] & 0xff;
+		int d4 = arr[offset + 3] & 0xff;
 		return (d1 << 24) + (d2 << 16) + (d3 << 8) + d4;
 
 	}
-	
-public static short toShort(byte[] arr, int offset) {
-		
+
+	public static short toShort(byte[] arr, int offset) {
+
 		int d1 = arr[offset] & 0xff;
-		int d2 = arr[offset+1] & 0xff;
+		int d2 = arr[offset + 1] & 0xff;
 		return (short) ((d1 << 8) + d2);
 
 	}
 
 	/**
 	 * Nice try,but no
+	 * 
 	 * @param arr
 	 * @param offset
 	 * @param len
 	 * @return
 	 */
-	public static  String toString(byte[] arr, int offset, int len) {
+	public static String toString(byte[] arr, int offset, int len) {
 		String str = null;
 		try {
 			str = new String(arr, offset, len, "iso8859-1").trim();
@@ -61,5 +62,6 @@ public static short toShort(byte[] arr, int offset) {
 		}
 		System.out.println();
 	}
+	
 
 }

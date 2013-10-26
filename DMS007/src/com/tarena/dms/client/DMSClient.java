@@ -149,7 +149,7 @@ public class DMSClient {
 		saveToTxtFile(logRecList, config.getLogRecFile());
 		saveToTxtFile(logs, config.getLoginLogFile());
 		
-		config.getLogFile().delete();
+		config.getTextLogFile().delete();
 	}
 
 	/**
